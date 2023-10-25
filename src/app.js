@@ -111,7 +111,7 @@ function printTemplateWeather(weatherDetails, weatherForecast, searchLocation) {
 }
 
 app.get("/", async (req, res) => {
-  res.render("current-location", { loading: true });
+  res.sendFile("./index.html", { root: __dirname });
 });
 
 app.post("/", async (req, res) => {
