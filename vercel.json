@@ -1,7 +1,7 @@
 {
   "version": 2,
   "builds": [
-    { "src": "**/*.html", "use": "@vercel/static" },
+    { "src": "**/*.ejs", "use": "@vercel/static" },
     {
       "src": "src/app.js",
       "use": "@vercel/node"
