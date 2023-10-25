@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "public": true,
   "builds": [
     {
       "src": "src/app.js",
