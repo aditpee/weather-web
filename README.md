@@ -36,7 +36,7 @@ Download repo and open with your favorite code editor. You can download with zip
 
 <br>
 
-### Intall All Dependencies
+### Install All Dependencies
 
 `npm install` to install all dependencies
 
@@ -46,9 +46,9 @@ npm install
 
 <br>
 
-### Create .env File
+### Create `.env` File
 
-create .env file and make variables
+create `.env` file and make variables
 
 ```
 // .env
@@ -88,6 +88,6 @@ You can styling your own Weather Web at `src/sass/abstract/_tokens.scss` Most of
 - [figma comunity](https://www.figma.com/community/file/1059229179375580154/weather-icons-kit)
 - [iconify](https://iconify.design/)
 
-### Background Image
+### Background Images
 
 - [unsplash](https://unsplash.com/)
