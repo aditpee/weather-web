@@ -1,0 +1,51 @@
+@use "sass:map";
+@use "sass:math";
+@use "sass:meta";
+@use "./breakpoints" as *;
+
+@mixin mq($size) {
+  @if map.has-key($breakpoints, $size) {
+    $breakpoint: map.get($breakpoints, $size);
+    @media screen and (min-width: $breakpoint) {
+      @content;
+    }
+  } @else if meta.type-of($size) == number {
+    @if math.is-unitless($size) {
+      @error 'when using a number with @mq() make sure to include a unit';
+    } @else {
+      @media screen and (min-width: $size) {
+        @content;
+      }
+    }
+  } @else {
+    @error 'the keyword #{$size} is not in the $breakpoints map';
+  }
+}
+
+@mixin mq-grid-container($size) {
+  @if map.has-key($breakpoints, $size) {
+    $breakpoint: map.get($breakpoints, $size);
+    @media screen and (min-width: $breakpoint) {
+      @debug $breakpoint;
+      grid-template-columns:
+        minmax(2rem, 1fr)
+        minmax(0, calc($breakpoint / 12 * 8))
+        minmax(0, calc($breakpoint / 12 * 4))
+        minmax(2rem, 1fr);
+    }
+  } @else if meta.type-of($size) == number {
+    @if math.is-unitless($size) {
+      @error 'when using a number with @mq() make sure to include a unit';
+    } @else {
+      @media screen and (min-width: $size) {
+        grid-template-columns:
+          minmax(2rem, 1fr)
+          minmax(0, calc($size / 12 * 8))
+          minmax(0, calc($size / 12 * 4))
+          minmax(2rem, 1fr);
+      }
+    }
+  } @else {
+    @error 'the keyword #{$size} is not in the $breakpoints map';
+  }
+}

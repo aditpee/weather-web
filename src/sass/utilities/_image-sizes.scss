@@ -1,0 +1,11 @@
+@use "../abstracts/" as *;
+
+@each $screen-size, $size-map in $img-sizes {
+  @each $size-name, $size-value in $size-map {
+    @if $screen-size == small {
+      .img-size-#{$size-name} {
+        width: var(--img-size-#{$size-name});
+      }
+    }
+  }
+}

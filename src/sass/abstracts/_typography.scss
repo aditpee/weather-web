@@ -1,0 +1,41 @@
+$-ff-sans: "Roboto", sans-serif;
+
+$font-family-base: $-ff-sans;
+
+$font-sizes: (
+  small: (
+    900: 4rem,
+    700: 1.875rem,
+    500: 1.25rem,
+    400: 0.75rem,
+    300: 0.875rem,
+    200: 0.625rem,
+  ),
+  medium: (
+    900: 7.5rem,
+    700: 3rem,
+    500: 1.5rem,
+    400: 1.125rem,
+    300: 1.125rem,
+    200: 1rem,
+  ),
+  large: (
+    900: 8.725rem,
+    700: 3.75rem,
+    400: 1.25rem,
+    200: 1.125rem,
+  ),
+);
+
+$font-size-200: var(--fs-200);
+$font-size-300: var(--fs-300);
+$font-size-400: var(--fs-400);
+$font-size-500: var(--fs-500);
+$font-size-700: var(--fs-700);
+$font-size-900: var(--fs-900);
+
+$-fw-400: 400;
+$-fw-500: 500;
+
+$font-weight-default: $-fw-400;
+$font-weight-medium: $-fw-500;

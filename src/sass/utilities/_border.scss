@@ -1,0 +1,5 @@
+@use "../abstracts/" as *;
+
+.border-top {
+  border-block-start: $search-input-border;
+}

@@ -1,0 +1,105 @@
+<div class="weather-details padding-block-start-9 padding-block-end-12">
+  <div>
+    <h2 class="fs-300 fw-default text-center margin-block-end-10">Weather Details</h2>
+  </div>
+  <div class="cards flow">
+    <div class="weather-desc">
+      <p class="uppercase fw-medium text-center"><%= (loading) ? "OVERCAST CLOUDS" : weatherDetails.desc %></p>
+    </div>
+    <div>
+      <p class="clr-neutral-300">Temp max</p>
+      <p><%= (loading) ? "19" : weatherDetails.tempMax %>°</p>
+      <img class="img-size-200" src="/img/icons/temp-max.svg" alt="" />
+    </div>
+    <div>
+      <p class="clr-neutral-300">Temp min</p>
+      <p><%= (loading) ? "15" : weatherDetails.tempMin %>°</p>
+      <img class="img-size-200" src="/img/icons/temp-min.svg" alt="" />
+    </div>
+    <div>
+      <p class="clr-neutral-300">Humidity</p>
+      <p><%= (loading) ? "58" : weatherDetails.humidity %>%</p>
+      <img class="img-size-200" src="/img/icons/humadity.svg" alt="" />
+    </div>
+    <div>
+      <p class="clr-neutral-300">Cloudy</p>
+      <p><%= (loading) ? "86" : weatherDetails.cloudy %>%</p>
+      <img class="img-size-200" src="/img/icons/cloudy.svg" alt="" />
+    </div>
+    <div>
+      <p class="clr-neutral-300">Wind</p>
+      <p><%= (loading) ? "5" : weatherDetails.wind %>km/h</p>
+      <img class="img-size-200" src="/img/icons/wind.svg" alt="" />
+    </div>
+  </div>
+</div>
+<div class="weather-forecast border-top padding-block-start-10 padding-block-end-12">
+  <div>
+    <h2 class="fs-300 fw-default text-center margin-block-end-10">Weather Forecast</h2>
+  </div>
+  <div class="cards cards-forecast flow">
+    <!-- card one -->
+    <div>
+      <img class="img-size-300" src="/img/icons/<%= (loading) ? "03d" : weatherForecast.one.icon %>.svg" alt="weather forecast icon" />
+      <div class="forecast-desc">
+        <p><%= (loading) ? "09" : weatherForecast.one.hour %>:00</p>
+        <p class="clr-neutral-300"><%= (loading) ? "Rain" : weatherForecast.one.main %></p>
+      </div>
+      <p class="fs-500 clr-neutral-300"><%= (loading) ? "19" : weatherForecast.one.temp %>°</p>
+    </div>
+    <!-- card two -->
+    <div>
+      <img class="img-size-300" src="/img/icons/<%= (loading) ? "03d" : weatherForecast.two.icon %>.svg" alt="weather forecast icon" />
+      <div class="forecast-desc">
+        <p><%= (loading) ? "09" : weatherForecast.two.hour %>:00</p>
+        <p class="clr-neutral-300"><%= (loading) ? "Rain" : weatherForecast.two.main %></p>
+      </div>
+      <p class="fs-500 clr-neutral-300"><%= (loading) ? "19" : weatherForecast.two.temp %>°</p>
+    </div>
+    <!-- card three -->
+    <div>
+      <img class="img-size-300" src="/img/icons/<%= (loading) ? "03d" : weatherForecast.three.icon %>.svg" alt="weather forecast icon" />
+      <div class="forecast-desc">
+        <p><%= (loading) ? "09" : weatherForecast.three.hour %>:00</p>
+        <p class="clr-neutral-300"><%= (loading) ? "Rain" : weatherForecast.three.main %></p>
+      </div>
+      <p class="fs-500 clr-neutral-300"><%= (loading) ? "19" : weatherForecast.three.temp %>°</p>
+    </div>
+    <!-- card four -->
+    <div>
+      <img class="img-size-300" src="/img/icons/<%= (loading) ? "03d" : weatherForecast.four.icon %>.svg" alt="weather forecast icon" />
+      <div class="forecast-desc">
+        <p><%= (loading) ? "09" : weatherForecast.four.hour %>:00</p>
+        <p class="clr-neutral-300"><%= (loading) ? "Rain" : weatherForecast.four.main %></p>
+      </div>
+      <p class="fs-500 clr-neutral-300"><%= (loading) ? "19" : weatherForecast.four.temp %>°</p>
+    </div>
+    <!-- card five -->
+    <div>
+      <img class="img-size-300" src="/img/icons/<%= (loading) ? "03d" : weatherForecast.five.icon %>.svg" alt="weather forecast icon" />
+      <div class="forecast-desc">
+        <p><%= (loading) ? "09" : weatherForecast.five.hour %>:00</p>
+        <p class="clr-neutral-300"><%= (loading) ? "Rain" : weatherForecast.five.main %></p>
+      </div>
+      <p class="fs-500 clr-neutral-300"><%= (loading) ? "19" : weatherForecast.five.temp %>°</p>
+    </div>
+    <!-- card six -->
+    <div>
+      <img class="img-size-300" src="/img/icons/<%= (loading) ? "03d" : weatherForecast.six.icon %>.svg" alt="weather forecast icon" />
+      <div class="forecast-desc">
+        <p><%= (loading) ? "09" : weatherForecast.six.hour %>:00</p>
+        <p class="clr-neutral-300"><%= (loading) ? "Rain" : weatherForecast.six.main %></p>
+      </div>
+      <p class="fs-500 clr-neutral-300"><%= (loading) ? "19" : weatherForecast.six.temp %>°</p>
+    </div>
+    <!-- card seven -->
+    <div>
+      <img class="img-size-300" src="/img/icons/<%= (loading) ? "03d" : weatherForecast.seven.icon %>.svg" alt="weather forecast icon" />
+      <div class="forecast-desc">
+        <p><%= (loading) ? "09" : weatherForecast.seven.hour %>:00</p>
+        <p class="clr-neutral-300"><%= (loading) ? "Rain" : weatherForecast.seven.main %></p>
+      </div>
+      <p class="fs-500 clr-neutral-300"><%= (loading) ? "19" : weatherForecast.seven.temp %>°</p>
+    </div>
+  </div>
+</div>

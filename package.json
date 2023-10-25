@@ -1,0 +1,31 @@
+{
+  "name": "weather-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app.js",
+  "scripts": {
+    "dev": "concurrently \"nodemon app\" \"npm run watch:sass\"",
+    "watch:sass": "sass --no-source-map --watch src/sass:public/css",
+    "build:sass": "sass --no-source-map src/sass:public/css",
+    "build:postcss": "postcss public/css/*.css -r --no-map",
+    "build": "npm run build:sass && npm run build:postcss"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^5.0.0",
+    "concurrently": "^8.2.1",
+    "nodemon": "^3.0.1",
+    "postcss": "^8.4.31",
+    "postcss-cli": "^10.1.0",
+    "sass": "^1.68.0"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.16",
+    "cssnano": "^6.0.1",
+    "dotenv": "^16.3.1",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2"
+  }
+}

@@ -1,0 +1,17 @@
+@use "../abstracts/" as *;
+
+body {
+  font-family: $body-font-family;
+  $font-weight: $body-font-weight;
+  font-size: $body-font-size;
+  color: $body-text-color;
+  line-height: $body-line-height;
+  height: $body-height;
+  overflow: $body-overflow;
+  background-image: $body-background-image;
+  background-size: $body-background-size;
+  background-repeat: $body-background-repeat;
+  background-position: $body-background-position;
+  background-color: $body-background-color;
+  // background-color: #ddd;
+}

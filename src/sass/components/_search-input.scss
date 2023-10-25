@@ -1,0 +1,41 @@
+@use "../abstracts/" as *;
+
+.search-input {
+  display: flex;
+  justify-content: $search-input-justify-content;
+  align-items: $search-input-align-items;
+  border-block-end: $search-input-border;
+  padding-block-end: $search-input-padding-block;
+
+  position: $search-input-position;
+  inset: $search-input-inset;
+  grid-row: #{$search-input-grid-row};
+  grid-column: #{$search-input-grid-column};
+  cursor: auto;
+
+  & > input {
+    background: $input-background;
+    border: $input-border;
+    outline: $input-outline;
+    width: $search-input-width-sm;
+    font-family: $font-family-base;
+
+    @include mq(medium) {
+      width: unset;
+    }
+
+    &::placeholder {
+      color: $search-input-placeholder-color;
+    }
+  }
+
+  & img {
+    cursor: pointer;
+  }
+
+  @include mq(large) {
+    position: $search-input-position-large;
+    grid-column: $search-input-grid-column-large;
+    grid-row: $search-input-grid-row-large;
+  }
+}

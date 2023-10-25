@@ -1,0 +1,21 @@
+@keyframes popupLoading {
+  0% {
+    filter: opacity(0);
+  }
+  100% {
+    filter: opacity(100%);
+  }
+}
+
+@keyframes loading {
+  0% {
+    left: auto;
+    right: 0;
+    width: 100%;
+  }
+  100% {
+    left: auto;
+    right: 0;
+    width: 0;
+  }
+}

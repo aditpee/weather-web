@@ -1,0 +1,13 @@
+<% 
+  const mainTime = (loading) ? "06:09" : `${mainInfo.calendar.hour}:${mainInfo.calendar.minute}`
+  const mainDate = (loading) ? "mon, 19 Oct 23" : `${mainInfo.calendar.day} ${mainInfo.calendar.date} ${mainInfo.calendar.month} ${mainInfo.calendar.year}`
+ 
+%>
+<article class="weather-main-info" data-position="true">
+  <p class="fs-900"><%= (loading) ? "16" : mainInfo.temp %><span style="margin-left: -4px">°</span></p>
+  <div class="wrapper relative">
+    <h1 class="fs-700 fw-default"><%= (loading) ? "London" : mainInfo.city %></h1>
+    <p class="fs-200"><%= mainTime %> - <%= mainDate %></p>
+    <img class="img-size-500" src="/img/icons/<%= (loading) ? "09d" : mainInfo.icon %>.svg" alt="icon current weather" />
+  </div>
+</article>

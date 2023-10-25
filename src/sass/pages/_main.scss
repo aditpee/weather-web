@@ -1,0 +1,58 @@
+@use "sass:map";
+@use "../abstracts/" as *;
+
+.main-container {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: $main-template-columns;
+  grid-template-rows: $main-template-rows;
+
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+
+  position: relative;
+  z-index: 1;
+
+  & > .main-section {
+    position: relative;
+    aspect-ratio: #{$main-section-height};
+    grid-column: #{$main-section-column};
+    grid-row: #{$main-section-row};
+  }
+  & > *.weather-bar {
+    grid-column: #{$main-weather-bar-column};
+    grid-row: #{$main-weather-bar-row};
+  }
+  & > *.bg-blur {
+    position: relative;
+    z-index: -1;
+    grid-column: #{$main-bg-blur-column};
+    grid-row: #{$main-bg-blur-row};
+  }
+
+  @include mq(medium) {
+    grid-template-columns: $main-template-columns-medium;
+  }
+
+  @include mq(large) {
+    grid-template-rows: $main-template-rows-large;
+    grid-template-columns: $main-template-columns-large;
+
+    & > .main-section {
+      aspect-ratio: $main-section-height-large;
+    }
+    & > *.weather-bar {
+      grid-column: #{$main-weather-bar-column-large};
+      grid-row: #{$main-weather-bar-row-large};
+    }
+    & > *.bg-blur {
+      grid-column: #{$main-bg-blur-column-large};
+      grid-row: #{$main-bg-blur-row-large};
+    }
+  }
+
+  @include mq(x-large) {
+    grid-template-columns: $main-template-columns-x-large;
+  }
+}

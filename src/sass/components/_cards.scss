@@ -1,0 +1,44 @@
+@use "sass:map";
+@use "../abstracts/" as *;
+
+// .cards > * {
+//   display: flex;
+//   justify-content: $card-justify-content;
+//   align-items: $card-align-items;
+
+//   &.weather-details > * {
+//     column-gap: $card-detail-gap;
+//   }
+//   &.weather-forecast > * {
+//     column-gap: $card-forecast-gap;
+//   }
+// }
+.cards > *:not(.weather-desc) {
+  display: $card-display;
+  align-items: $card-align-items;
+  grid-template-columns: $card-details-template-columns;
+  width: $card-width;
+
+  & > *:nth-child(2) {
+    justify-self: $card-details-justify;
+  }
+  & > *:last-child {
+    justify-self: $card-details-justify;
+  }
+
+  @include mq(medium) {
+    width: $card-width-medium;
+  }
+
+  @include mq(large) {
+    width: $card-width-large;
+  }
+}
+
+.cards.cards-forecast > * {
+  grid-template-columns: $card-forecast-template-columns;
+
+  & > *:nth-child(2) {
+    justify-self: $card-forecast-justify;
+  }
+}

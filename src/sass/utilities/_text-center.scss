@@ -1,0 +1,9 @@
+@use "../abstracts/" as *;
+
+.text-center {
+  text-align: center;
+
+  @include mq(large) {
+    text-align: start;
+  }
+}

@@ -1,0 +1,25 @@
+
+<%- include('layouts/head') %>
+  <body>  
+    <main class="main-container">
+      <%- include('layouts/main-section') %>
+      <div class="bg-blur"></div>
+      <%- include('layouts/aside') %>
+    </main>    
+    <!-- for change background -->
+    <input id="bg-img" type="hidden" value="<%= weatherMain %>">
+    <input id="day" type="hidden" value="<%= mainInfo.icon %>">
+
+
+    <!-- javascript -->
+  <!-- <script src="/script/changeBg.js"></script> -->
+  <script type="module">
+    import {loadingAnimation} from "/script/loading.js"
+    import {changeBackgroundImg} from "/script/changeBg.js"
+
+    changeBackgroundImg()
+    const searchInput = document.querySelector(".search-input");
+    searchInput.addEventListener("submit", loadingAnimation);
+  </script>
+  </body>
+</html>

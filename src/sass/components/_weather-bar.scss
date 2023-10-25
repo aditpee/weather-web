@@ -1,0 +1,38 @@
+@use "sass:map";
+@use "../abstracts/" as *;
+
+.weather-bar {
+  display: grid;
+  margin-block-start: $weather-bar-margin-top;
+  height: $weather-bar-height;
+  overflow-y: $weather-bar-overflow;
+  justify-content: center;
+  cursor: url("/img/icons/scroll.svg"), auto;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+
+  // text-align: center;
+  @include mq(medium) {
+    height: $weather-bar-height-medium;
+  }
+
+  @include mq(large) {
+    margin-block-start: 0;
+    padding-inline-start: $size-10;
+    height: $weather-bar-height-large;
+    justify-content: stretch;
+  }
+}
+
+.bg-blur {
+  border-block-start: $weather-bar-border;
+  backdrop-filter: $weather-bar-filter;
+  background-color: $weather-bar-background-color;
+
+  @include mq(large) {
+    border-block-start: none;
+    border-inline-start: $weather-bar-border;
+  }
+}

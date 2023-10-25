@@ -1,0 +1,13 @@
+$-clr-white: hsl(0 0% 100%);
+$-clr-gray-300: hsl(0 0% 100% / 0.7);
+
+$default: (
+  neutral: (
+    "000": $-clr-white,
+    "300": $-clr-gray-300,
+  ),
+);
+
+// contextual color token
+$color-neutral-000: var(--neutral-000);
+$color-neutral-300: var(--neutral-300);

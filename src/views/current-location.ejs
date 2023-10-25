@@ -1,0 +1,24 @@
+
+<%- include('layouts/head') %>
+  <body style="background-image: unset">  
+    <main class="main-container">
+      <%- include('layouts/main-section') %>
+      <div class="bg-blur"></div>
+      <%- include('layouts/aside') %>
+    </main>    
+    <div class="wrapper">
+      <form hidden action="/" method="post">
+        <input id="current-lat" name="currentlat" type="hidden">
+        <input id="current-lon" name="currentlon" type="hidden">
+        <button id="current-weather" type="hidden"></button>
+      </form>
+    </div>
+    <script type="module">
+      import {loadingAnimation} from "/script/loading.js"
+      import {getYourLocation} from "/script/getLocation.js"
+      
+      loadingAnimation()
+      getYourLocation()
+    </script>
+  </body>
+</html>
