@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "src/app.js",
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
     "dev": "concurrently \"nodemon app\" \"npm run watch:sass\"",
     "watch:sass": "sass --no-source-map --watch src/sass:public/css",
