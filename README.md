@@ -1,6 +1,6 @@
 # Weather Web
 
-<img align="right" width="250" src="./public/img/preview.png">
+<img align="right" width="250" src="./public/img/others/preview.png">
 
 A responsive website to find out weather in the world, including at your location
 
