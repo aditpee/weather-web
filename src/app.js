@@ -15,7 +15,7 @@ const port = process.env.PORT;
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
-app.use(express.static(".vercel/output/static"));
+app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 
 function printTemplateWeather(weatherDetails, weatherForecast, searchLocation) {
@@ -155,3 +155,5 @@ app.post("/", async (req, res) => {
 app.listen(port, () => {
   console.log(`Your app listening at http://localhost:${port}`);
 });
+
+module.exports = app;
