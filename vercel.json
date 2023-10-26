@@ -17,13 +17,13 @@
   ],
   "routes": [
     {
-      "src": "/(.*)",
-      "dest": "src/app.js"
-    },
-    {
       "src": "public/img/(.*)",
       "headers": { "Cache-Control": "public, max-age=31556952, immutable" },
       "continue": true
+    },
+    {
+      "src": "/(.*)",
+      "dest": "src/app.js"
     }
   ]
 }
