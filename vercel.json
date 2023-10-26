@@ -1,6 +1,11 @@
 {
   "version": 2,
+  "public": true,
   "builds": [
+    {
+      "src": "**/*.ejs",
+      "use": "@vercel/static"
+    },
     {
       "src": "**/*.svg",
       "use": "@vercel/static"
