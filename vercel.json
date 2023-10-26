@@ -19,49 +19,11 @@
     {
       "src": "/(.*)",
       "dest": "src/app.js"
-    }
-  ],
-  "headers": [
-    {
-      "source": "/service-worker.js",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=0, must-revalidate"
-        }
-      ]
     },
     {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        },
-        {
-          "key": "X-Frame-Options",
-          "value": "DENY"
-        },
-        {
-          "key": "X-XSS-Protection",
-          "value": "1; mode=block"
-        }
-      ]
-    },
-    {
-      "source": "/:path*",
-      "has": [
-        {
-          "type": "query",
-          "key": "authorized"
-        }
-      ],
-      "headers": [
-        {
-          "key": "x-authorized",
-          "value": "true"
-        }
-      ]
+      "src": "**/*.svg",
+      "headers": { "Cache-Control": "public, max-age=31556952, immutable" },
+      "continue": true
     }
   ]
 }
