@@ -3,24 +3,11 @@
   "public": true,
   "builds": [
     {
-      "src": "**/*.ejs",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "**/*.svg",
-      "use": "@vercel/static"
-    },
-    {
       "src": "src/app.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
-    {
-      "src": "public/img/icons/(.*)",
-      "headers": { "Cache-Control": "public, max-age=31556952, immutable" },
-      "continue": true
-    },
     {
       "src": "/(.*)",
       "dest": "src/app.js"
