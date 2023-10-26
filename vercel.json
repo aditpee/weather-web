@@ -17,7 +17,7 @@
   ],
   "routes": [
     {
-      "src": "public/img/(.*)",
+      "src": "public/img/icons/(.*)",
       "headers": { "Cache-Control": "public, max-age=31556952, immutable" },
       "continue": true
     },
