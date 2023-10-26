@@ -21,7 +21,7 @@
       "dest": "src/app.js"
     },
     {
-      "src": "**/*.svg",
+      "src": "public/img/(.*)",
       "headers": { "Cache-Control": "public, max-age=31556952, immutable" },
       "continue": true
     }
