@@ -23,7 +23,7 @@ function getDefaultLocation() {
     currentLon.value = "-0.1276474";
   }
   currentBtn.click();
-  alert("please activate your location to get your location weather");
+  alert("please activate your location to get weather at your location");
 }
 
 function getYourLocation() {
