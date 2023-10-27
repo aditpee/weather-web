@@ -28,8 +28,6 @@ function printTemplateWeather(weatherDetails, weatherForecast, searchLocation) {
   const hour = localTime.getUTCHours();
   const minute = localTime.getUTCMinutes();
 
-  console.log(weatherForecast[0].dt_txt);
-
   function getForecastHour(index) {
     return weatherForecast[index].dt_txt.split("").slice(11, 13).join(""); // 2023-10-27 06:00:00 => "06"
   }
