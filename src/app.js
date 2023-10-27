@@ -40,7 +40,7 @@ function printTemplateWeather(weatherDetails, weatherForecast, searchLocation) {
       calendar: {
         hour: hour < 10 ? `0${hour}` : `${hour}`,
         minute: minute < 10 ? `0${minute}` : `${minute}`,
-        day: searchLocation ? day : `${day},`,
+        day,
         date,
         month,
         year: searchLocation ? year : year.split("").slice(2, 4).join(""),
