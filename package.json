@@ -11,7 +11,7 @@
     "watch:sass": "sass --no-source-map --watch src/sass:public/css",
     "build:sass": "sass --no-source-map src/sass:public/css",
     "build:postcss": "postcss public/css/*.css -r --no-map",
-    "build": "npm run build:sass && npm run build:postcss"
+    "start": "node src/app.js"
   },
   "keywords": [],
   "author": "",
