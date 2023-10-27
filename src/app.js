@@ -22,20 +22,16 @@ function printTemplateWeather(weatherDetails, weatherForecast, searchLocation) {
   const { name, main, weather, clouds, wind, sys, dt, timezone } =
     weatherDetails;
 
-  const localTime = searchLocation
-    ? new Date((dt + timezone) * 1000)
-    : new Date();
+  const localTime = new Date((dt + timezone) * 1000);
 
-  const [day, month, date, year] = searchLocation
-    ? localTime.toUTCString().split(" ")
-    : localTime.toDateString().split(" ");
-  const hour = searchLocation ? localTime.getUTCHours() : localTime.getHours();
-  const minute = searchLocation
-    ? localTime.getUTCMinutes()
-    : localTime.getMinutes();
+  const [day, month, date, year] = localTime.toUTCString().split(" ");
+  const hour = localTime.getUTCHours();
+  const minute = localTime.getUTCMinutes();
+
+  console.log(weatherForecast[0].dt_txt);
 
   function getForecastHour(index) {
-    return weatherForecast[index].dt_txt.split("").slice(11, 13).join("");
+    return weatherForecast[index].dt_txt.split("").slice(11, 13).join(""); // 2023-10-27 06:00:00 => "06"
   }
 
   return {
