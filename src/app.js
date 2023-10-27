@@ -24,7 +24,7 @@ function printTemplateWeather(weatherDetails, weatherForecast, searchLocation) {
 
   const localTime = new Date((dt + timezone) * 1000);
 
-  const [day, month, date, year] = localTime.toUTCString().split(" ");
+  const [day, date, month, year] = localTime.toUTCString().split(" ");
   const hour = localTime.getUTCHours();
   const minute = localTime.getUTCMinutes();
 
@@ -43,7 +43,7 @@ function printTemplateWeather(weatherDetails, weatherForecast, searchLocation) {
         day,
         date,
         month,
-        year: searchLocation ? year : year.split("").slice(2, 4).join(""),
+        year,
       },
       city: searchLocation ? searchLocation.name : name,
       country: searchLocation ? searchLocation.country : sys.country,
