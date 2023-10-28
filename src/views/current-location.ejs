@@ -15,15 +15,23 @@
     </div>
     <script type="module">
       import {loadingAnimation} from "/script/loading.js"
+      import {getYourLocation} from "/script/getLocation.js"
       
       loadingAnimation()
       
-const currentBtn = document.getElementById("current-weather");
-const currentLat = document.getElementById("current-lat");
-const currentLon = document.getElementById("current-lon");
-currentLat.value = "51.5073219";
-currentLon.value = "-0.1276474";
-currentBtn.click();
+      // for get your location
+      const currentLat = document.getElementById("current-lat");
+      const currentLon = document.getElementById("current-lon");
+
+      if (!navigator.geolocation) {
+        if (currentLat.value == "") {
+          currentLat.value = "51.5073219";
+          currentLon.value = "-0.1276474";
+        }
+      } else {
+        getYourLocation()
+      }
+
     </script>
   </body>
 </html>
