@@ -21,7 +21,7 @@ function getDefaultLocation() {
 
 function getYourLocation() {
   navigator.geolocation.getCurrentPosition(success, getDefaultLocation, {
-    enableHighAccuracy: true,
+    enableHighAccuracy: false,
   });
 }
 
