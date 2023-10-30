@@ -28,6 +28,8 @@ async function getLocation(location) {
 
 function printTemplateWeather(weatherDetails, weatherForecast, searchLocation) {
   const { name, main, weather, clouds, wind, sys, timezone } = weatherDetails;
+  console.log(weatherDetails);
+  console.log(weatherForecast);
 
   const GMTTime = new Date().getTime();
   const localTime = new Date(GMTTime + timezone * 1000);
@@ -40,7 +42,10 @@ function printTemplateWeather(weatherDetails, weatherForecast, searchLocation) {
   const GMTHours = new Date().getUTCHours();
   const localGMT = timezone / 3600;
 
-  const forecastIndex = getForecastIndex(GMTHours, localGMT);
+  const forecastIndex =
+    getForecastIndex(GMTHours, localGMT) >= 0
+      ? getForecastIndex(GMTHours, localGMT)
+      : 0;
 
   function getForecastIndex(GMTHours, localGMT) {
     if (GMTHours % 3 == 0) {
