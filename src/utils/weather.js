@@ -27,10 +27,10 @@ async function getLocation(location) {
 // ==== Weather Dynamic Value =====
 
 function printTemplateWeather(weatherDetails, weatherForecast, searchLocation) {
-  const { name, main, weather, clouds, wind, sys, dt, timezone } =
-    weatherDetails;
+  const { name, main, weather, clouds, wind, sys, timezone } = weatherDetails;
 
-  const localTime = new Date((dt + timezone) * 1000);
+  const GMTTime = new Date().getTime();
+  const localTime = new Date(GMTTime + timezone * 1000);
 
   const [day, date, month, year] = localTime.toUTCString().split(" ");
   const hour = localTime.getUTCHours();
