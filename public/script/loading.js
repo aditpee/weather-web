@@ -3,12 +3,13 @@ const searchBtn = document.getElementById("search-btn");
 const logo = document.getElementById("logo");
 const hiddenBtn = document.getElementById("search-hidden-btn");
 const mainInfo = document.querySelector(".weather-main-info");
+const cards = document.querySelectorAll(".cards");
 
 // create loading element
 const loading = document.createElement("div");
 loading.className = "loading"; // add class
 
-const cards = document.querySelectorAll(".cards");
+// for search btn if we click, input submit
 searchBtn.addEventListener("click", () => {
   hiddenBtn.click();
 });
