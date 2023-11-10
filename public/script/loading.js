@@ -1,7 +1,5 @@
-const searchInput = document.querySelector(".search-input");
-const searchBtn = document.getElementById("search-btn");
+const searchForm = document.querySelector(".search-form");
 const logo = document.getElementById("logo");
-const hiddenBtn = document.getElementById("search-hidden-btn");
 const mainInfo = document.querySelector(".weather-main-info");
 const cards = document.querySelectorAll(".cards");
 
@@ -10,10 +8,6 @@ const loading = document.createElement("div");
 loading.className = "loading"; // add class
 
 // for search btn if we click, input submit
-searchBtn.addEventListener("click", () => {
-  hiddenBtn.click();
-});
-
 function opacityLoading(parent) {
   const children = parent.children;
   [...children].forEach((child) => {
@@ -32,7 +26,7 @@ function loadingEffect(element) {
 function loadingAnimation() {
   document.body.style.setProperty("--background-image", "");
   loadingEffect(logo);
-  loadingEffect(searchInput);
+  loadingEffect(searchForm);
   loadingEffect(mainInfo);
 
   cards.forEach((card) => {

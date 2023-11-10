@@ -1,6 +1,6 @@
 @use "../abstracts/" as *;
 
-.search-input {
+.search-form {
   display: flex;
   justify-content: $search-input-justify-content;
   align-items: $search-input-align-items;
@@ -29,8 +29,12 @@
     }
   }
 
-  & img {
+  & > img {
     cursor: pointer;
+    justify-self: end;
+  }
+  & > img[aria-hidden="false"] {
+    display: none;
   }
 
   @include mq(large) {

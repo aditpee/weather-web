@@ -43,17 +43,17 @@ app.post("/", async (req, res) => {
 
     // ====== search manual weather on input search =======
   } else if (location) {
-    const searchLocation = await getLocation(location);
-    const { lat, lon } = searchLocation;
-
-    const weatherDetails = await getWeatherDetails(lat, lon);
-    const weatherForecast = await getWeatherForecast(lat, lon);
-
-    res.render(
-      "index",
-      printTemplateWeather(weatherDetails, weatherForecast, searchLocation)
-    );
     try {
+      const searchLocation = await getLocation(location);
+      const { lat, lon } = searchLocation;
+
+      const weatherDetails = await getWeatherDetails(lat, lon);
+      const weatherForecast = await getWeatherForecast(lat, lon);
+
+      res.render(
+        "index",
+        printTemplateWeather(weatherDetails, weatherForecast, searchLocation)
+      );
     } catch (err) {
       res.status(404);
       res.send(`<h1>${err}</h1>`);

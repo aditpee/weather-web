@@ -1,8 +1,8 @@
 <% 
 const searchLocation = (loading) ? "London, GB" : `${mainInfo.city}, ${mainInfo.country}`
 %>
-<form action="/" method="post" class="search-input" data-position="true">
-  <button id="search-hidden-btn" hidden></button>
-  <input autofocus name="location" class="capitalize fs-400 clr-neutral-000" type="text" value="<%- searchLocation %>" autocomplete="off" required minlength="3" placeholder="Search Location..." />
-  <img id="search-btn" class="img-size-search" src="/img/icons/search.svg" alt="" type="submit"/>
+<form action="/" method="post" class="search-form" data-position="true">
+  <input autofocus name="location" class="search-input capitalize fs-400 clr-neutral-000" type="text" value="<%- searchLocation %>" autocomplete="off" required minlength="3" placeholder="Search Location..." />
+  <img aria-hidden="true" id="clear-btn" class="img-size-clear" src="/img/icons/close.svg" alt="">
+  <img aria-hidden="false" id="search-img" class="img-size-search" src="/img/icons/search.svg" alt=""/>
 </form>

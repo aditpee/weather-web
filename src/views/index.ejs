@@ -12,14 +12,15 @@
 
 
     <!-- javascript -->
-  <!-- <script src="/script/changeBg.js"></script> -->
   <script type="module">
     import {loadingAnimation} from "/script/loading.js"
     import {changeBackgroundImg} from "/script/changeBg.js"
+    import {} from "/script/search.js"
 
     changeBackgroundImg()
-    const searchInput = document.querySelector(".search-input");
-    searchInput.addEventListener("submit", loadingAnimation);
+    const searchForm = document.querySelector(".search-form");
+    searchForm.addEventListener("submit", loadingAnimation);
+    // handleSearchInput()
   </script>
   </body>
 </html>
