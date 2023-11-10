@@ -2,7 +2,9 @@
 
 <img align="right" width="250" src="./public/img/others/preview.png">
 
-A responsive website to find out weather in the world, including at your location
+A responsive website to find out weather in the world
+
+Check my design at my [figma comunity](https://www.figma.com/community/file/1300997022541611628/weather-web)
 
 I use api from [openweahtermap](https://openweathermap.org) to find weather in every location
 
@@ -22,66 +24,29 @@ I use api from [openweahtermap](https://openweathermap.org) to find weather in e
 
 ## Start Your Own Weather Web ⛅
 
----
+- Get api key, you must register at [openweahtermap](https://openweathermap.org/home/sign_up) to get your api key
+- Download repo or fork this repo and open with your favorite code editor.
+- Install All Dependencies, `npm install` to install all dependencies
+- create `.env` file and make variables
 
-### Get Api key
+  ```
+  // .env
 
-You must register on [openweahtermap](https://openweathermap.org/home/sign_up) to get your api key
+  API_KEY="(Your api key)"
+  PORT=3000
 
-<br>
+  ```
 
-### Download Repository
+- `npm run dev `to see your app on server
 
-Download repo and open with your favorite code editor. You can download with zip or fork this repo
+  ```
+  npm run dev
 
-<br>
-
-### Install All Dependencies
-
-`npm install` to install all dependencies
-
-```
-npm install
-```
-
-<br>
-
-### Create `.env` File
-
-create `.env` file and make variables
-
-```
-// .env
-
-API_KEY="(Your api key)"
-PORT=3000
-
-```
-
-<br>
-
-### See Your Own Weather Web
-
-`npm run dev `to see your app on server
-
-```
-npm run dev
-
-// result
-Your app listening at http://localhost:3000
-```
-
-<br>
-
-### Tips 💡
-
-You can styling your own Weather Web at `src/sass/abstract/_tokens.scss` Most of styling css can control at this file
-
-<br>
+  // result
+  Your app listening at http://localhost:3000
+  ```
 
 ## Source
-
----
 
 ### Icons
 
